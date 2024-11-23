@@ -32,3 +32,10 @@ def test_should_return_number_if_valid():
             assert result <= 4, f"Test failed: Returned number {result} is greater than 4."
         except ValueError as e:
             print(e)
+def test_should_raise_exception_for_number_greater_than_4():
+    """Tests that an exception is raised if the processed number is greater than 4."""
+    try:
+        while True:  # Keep running until a ValueError is raised
+            process_random_number()
+    except ValueError as e:
+        assert "is greater than 4" in str(e), "Test failed: Exception message incorrect."
