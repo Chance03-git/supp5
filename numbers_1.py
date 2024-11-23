@@ -1,4 +1,5 @@
 import math
+import random
 def square_root(num):
     """Calculates the square root of a number.
 
@@ -14,7 +15,25 @@ def square_root(num):
     if num < 0:
         raise ValueError("Cannot calculate the square root of a negative number.")
     return math.sqrt(num)
+def process_random_number():
+    number = random.randint(1, 100)
+    print(f"Random number picked: {number}")  # Debugging statement
 
+    if number % 2 == 0:
+        pass  # Do nothing if even
+    else:
+        number *= 2  # Multiply by 2 if odd
+
+    if number % 3 == 0:
+        number //= 3  # Divide by 3 if divisible by 3
+
+    if number % 4 == 0:
+        number *= 4  # Multiply by 4 if divisible by 4
+
+    if number > 4:
+        raise ValueError(f"Number {number} is greater than 4.")
+
+    return number
 
 def test_should_return_square_root_of_positive_number():
     assert square_root(16) == 4
