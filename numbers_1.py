@@ -43,6 +43,17 @@ def process_random_number():
 
     return number
 def find_divisibles(n):
+    """Finds integers between 1 and 10 that are divisible by the given integer.
+
+    Args:
+        n: The integer to check divisibility against.
+
+    Returns:
+        A list of integers between 1 and 10 that are divisible by n.
+
+    Raises:
+        ValueError: If n is 0 to prevent division by zero.
+    """
     if n == 0:
         raise ValueError("Division by zero is not allowed.")
     
