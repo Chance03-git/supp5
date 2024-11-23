@@ -24,3 +24,11 @@ def test_should_raise_exception_for_negative_number():
         assert False, "Test failed: square_root(-9) should raise ValueError."
     except ValueError as e:
         assert str(e) == "Cannot calculate the square root of a negative number."
+def test_should_return_number_if_valid():
+    """Tests that a valid number is returned if it is less than or equal to 4."""
+    for _ in range(100):  # Run multiple tests to increase coverage
+        try:
+            result = process_random_number()
+            assert result <= 4, f"Test failed: Returned number {result} is greater than 4."
+        except ValueError as e:
+            print(e)
