@@ -42,6 +42,11 @@ def process_random_number():
         raise ValueError(f"Number {number} is greater than 4.")
 
     return number
+def find_divisibles(n):
+    if n == 0:
+        raise ValueError("Division by zero is not allowed.")
+    
+    return [i for i in range(1, 11) if i % n == 0]
 
 def test_should_return_square_root_of_positive_number():
     assert square_root(16) == 4
