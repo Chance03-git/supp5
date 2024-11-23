@@ -66,3 +66,7 @@ def test_should_raise_exception_for_number_greater_than_4():
             process_random_number()
     except ValueError as e:
         assert "is greater than 4" in str(e), "Test failed: Exception message incorrect."
+def test_should_return_divisibles_for_positive_number():
+    """Tests the find_divisibles function with a positive integer."""
+    assert find_divisibles(2) == [2, 4, 6, 8, 10], "Test failed: find_divisibles(2) should return [2, 4, 6, 8, 10]."
+    assert find_divisibles(3) == [3, 6, 9], "Test failed: find_divisibles(3) should return [3, 6, 9]."
