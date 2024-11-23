@@ -1,5 +1,16 @@
 import math
 def square_root(num):
+    """Calculates the square root of a number.
+
+    Args:
+        number: The number to calculate the square root of.
+
+    Returns:
+        The square root of the number.
+
+    Raises:
+        ValueError: If the number is negative.
+    """
     if num < 0:
         raise ValueError("Cannot calculate the square root of a negative number.")
     return math.sqrt(num)
