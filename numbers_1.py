@@ -16,6 +16,14 @@ def square_root(num):
         raise ValueError("Cannot calculate the square root of a negative number.")
     return math.sqrt(num)
 def process_random_number():
+    """Picks a random integer between 1 and 100 and processes it based on conditions.
+
+    Returns:
+        The processed number if no exception is raised.
+
+    Raises:
+        ValueError: If the processed number is greater than 4.
+    """
     number = random.randint(1, 100)
     print(f"Random number picked: {number}")  # Debugging statement
 
